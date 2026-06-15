@@ -11,6 +11,7 @@
   <ItemGroup>
     <None Remove="Icon\chat.png" />
     <None Remove="Icon\database.png" />
+    <None Remove="Icon\send.png" />
     <None Remove="Icon\setting.png" />
   </ItemGroup>
 
@@ -19,6 +20,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Icon\database.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icon\send.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Icon\setting.png">

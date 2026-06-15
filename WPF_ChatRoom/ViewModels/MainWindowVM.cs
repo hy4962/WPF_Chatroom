@@ -28,7 +28,6 @@ namespace WPF_ChatRoom.ViewModels
 
             // 默认显示首页
             CurrentPage = new HomeView();
-
         }
 
 
