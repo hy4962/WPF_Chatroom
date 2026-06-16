@@ -22,7 +22,7 @@ namespace WPF_ChatRoom.Views.Pages
         public HomeView()
         {
             InitializeComponent();
-            this.DataContext = new HomeVM();
+            this.DataContext = HomeVM.Instance;
         }
 
     }

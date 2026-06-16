@@ -10,26 +10,27 @@ namespace WPF_ChatRoom.Sockets
 {
     internal class SocketManager
     {
+        private static SocketManager _instance =new();
         public event Action<string, string,bool> MessageReceived;
 
         private Dictionary<string,Socket> _serverManager;
+        private Dictionary<string,Socket> _clientManager;
 
 		public Dictionary<string,Socket> ServerManager
         {
 			get { return _serverManager; }
 			set { _serverManager = value; }
 		}
-
-		private Dictionary<string,Socket> _clientManager;
-
+        
 		public Dictionary<string,Socket> ClientManager
         {
 			get { return _clientManager; }
 			set { _clientManager = value; }
 		}
 
+        public static SocketManager Instance => _instance;
 
-        public SocketManager()
+        private SocketManager()
         {
             _serverManager = new Dictionary<string, Socket>();
             _clientManager = new Dictionary<string, Socket>();

@@ -23,7 +23,7 @@ namespace WPF_ChatRoom.ViewModels
         public MainWindowVM()
         {
             HomePage = new RelayCommand(_ => CurrentPage = new HomeView());
-            SettingsPage = new RelayCommand(_ => CurrentPage = new Settings());
+            SettingsPage = new RelayCommand(_ => CurrentPage = new SettingsView());
             DataBasePage = new RelayCommand(_ => CurrentPage = new DataBaseView());
 
             // 默认显示首页

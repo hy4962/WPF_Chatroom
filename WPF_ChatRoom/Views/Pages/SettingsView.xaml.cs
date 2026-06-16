@@ -10,17 +10,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_ChatRoom.ViewModels;
 
 namespace WPF_ChatRoom.Views.Pages
 {
     /// <summary>
     /// Settings.xaml 的交互逻辑
     /// </summary>
-    public partial class Settings : UserControl
+    public partial class SettingsView : UserControl
     {
-        public Settings()
+        public SettingsView()
         {
             InitializeComponent();
+            this.DataContext = new SettingsVM();
         }
     }
 }
