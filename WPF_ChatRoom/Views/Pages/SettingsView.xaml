@@ -68,9 +68,8 @@
                 <cc:CustomButton Grid.Row="4" Grid.Column="1" Width="80" Height="30" Content="连接至服务器" Command="{Binding ClientConnectCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CustomButtonStyle}"/>
             </Grid>
             
-            <Line Grid.RowSpan="99" Grid.Column="1" X1="10" Y1="0" X2="10" Y2="1000" Stroke="Black" StrokeThickness="2" StrokeDashArray="4 2"/>
-
+            
+            
         </Grid>
-        
     </Border>
 </UserControl>
