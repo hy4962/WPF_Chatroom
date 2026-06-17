@@ -67,10 +67,10 @@ public class SettingsModel
     private SettingsModel()
     {
         ServerIP = "127.0.0.1";
-        ServerPort = 8000;
+        ServerPort = 8686;
         ServerMaxNumber = 10;
         ClientIP = "127.0.0.1";
-        ClientPort = 8001;
+        ClientPort = 8686;
     }
 
     public static SettingsModel Instance => _lazy.Value;

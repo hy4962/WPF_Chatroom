@@ -22,7 +22,7 @@ namespace WPF_ChatRoom.Views.Pages
         public SettingsView()
         {
             InitializeComponent();
-            this.DataContext = new SettingsVM();
+            this.DataContext = SettingsVM.Instance;
         }
     }
 }

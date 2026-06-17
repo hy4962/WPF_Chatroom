@@ -60,12 +60,12 @@
                 <TextBlock Grid.ColumnSpan="99" Text="Client" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 
                 <TextBlock Grid.Row="1" Text="IP:" Width="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding ClientIP}" Width="150" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding RemoteServerIP}" Width="150" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                 
                 <TextBlock Grid.Row="2" Text="Prot:" Width="30" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding ClientProt}" Width="150" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding RemoteServerProt}" Width="150" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                 
-                <cc:CustomButton Grid.Row="4" Grid.Column="1" Width="80" Height="30" Content="连接至服务器" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CustomButtonStyle}"></cc:CustomButton>
+                <cc:CustomButton Grid.Row="4" Grid.Column="1" Width="80" Height="30" Content="连接至服务器" Command="{Binding ClientConnectCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CustomButtonStyle}"/>
             </Grid>
             
             <Line Grid.RowSpan="99" Grid.Column="1" X1="10" Y1="0" X2="10" Y2="1000" Stroke="Black" StrokeThickness="2" StrokeDashArray="4 2"/>
