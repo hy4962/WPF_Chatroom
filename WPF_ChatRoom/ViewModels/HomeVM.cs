@@ -52,7 +52,8 @@ namespace WPF_ChatRoom.ViewModels
         private HomeVM()
         {
             SendCommand = new RelayCommand(_ => SendMessage());
-            EventManager.OnClientConnect += (string EndPoint) =>
+            Messages.Add(new ChatMessage { Content = "这是一条测试消息", IsSelf = false });
+            _serverManager.AddClient += (string EndPoint) =>
             {
                 //Application.Current.Dispatcher.Invoke回到ui线程去操作，因为通知的时候是在后台线程(Task)里
                 Application.Current.Dispatcher.Invoke(() =>
@@ -60,7 +61,7 @@ namespace WPF_ChatRoom.ViewModels
                     ConnectClients.Add(EndPoint);
                 });
             };
-            EventManager.OnRemoteServer += (string EndPoint) =>
+            _clientManager.AddServer += (string EndPoint) =>
             {
                 //Application.Current.Dispatcher.Invoke回到ui线程去操作，因为通知的时候是在后台线程(Task)里
                 Application.Current.Dispatcher.Invoke(() =>
@@ -69,8 +70,8 @@ namespace WPF_ChatRoom.ViewModels
                 });
             };
         }
-        
-        
+
+
 
 
         private void SendMessage()
@@ -86,6 +87,7 @@ namespace WPF_ChatRoom.ViewModels
                 {
                     _clientManager.Send(SelectRemoteServer, InputText);
                 }
+                _clientManager.Send(SelectRemoteServer, InputText);
                 Messages.Add(new ChatMessage { Content = InputText, IsSelf = true });
             }
         }

@@ -24,6 +24,6 @@ namespace WPF_ChatRoom.Views.Pages
             InitializeComponent();
             this.DataContext = HomeVM.Instance;
         }
-
+        
     }
 }

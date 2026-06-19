@@ -11,7 +11,7 @@ public class ClientManager
     
     private Dictionary<string, Socket> _serverDictionary;
 
-   
+    public event Action<string> AddServer; 
     
     
     public Dictionary<string, Socket> ServerDictionary
@@ -30,16 +30,14 @@ public class ClientManager
         Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         socket.Connect(ip,port);
         _serverDictionary.Add($"{ip}:{port}",socket);
-        EventManager.RaiseRemoteServer($"{ip}:{port}");
+        AddServer?.Invoke($"{ip}:{port}");
     }
 
     public void Send(string serverEndPoint,string message)
     {
-        if (_serverDictionary.TryGetValue(serverEndPoint,out var socket))
-        {
-            byte[] bytes = Encoding.UTF8.GetBytes(message);
-            socket.Send(bytes);
-        }
+        Socket socket = _serverDictionary[serverEndPoint];
+        byte[] bytes = Encoding.UTF8.GetBytes(message);
+        socket.Send(bytes);
     }
 
     

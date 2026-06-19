@@ -22,5 +22,11 @@ namespace WPF_ChatRoom
             InitializeComponent();
             this.DataContext = new MainWindowVM();
         }
+
+        private void UIElement_OnMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if(e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
     }
 }

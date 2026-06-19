@@ -7,7 +7,7 @@
         xmlns:custom="clr-namespace:WPF_ChatRoom.CustomControl"
         Background="Transparent" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" ResizeMode="NoResize" Height="720" Width="1280">
     
-    <Border Background="Orange" BorderBrush="Black" BorderThickness="1" Margin="10" CornerRadius="20">
+    <Border Background="Orange" BorderBrush="Black" BorderThickness="1" Margin="10" CornerRadius="20" MouseDown="UIElement_OnMouseDown">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="60" />

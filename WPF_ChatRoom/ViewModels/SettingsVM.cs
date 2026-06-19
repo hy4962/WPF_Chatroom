@@ -51,13 +51,6 @@ internal class SettingsVM:ViewModelBase
     {
         CreateServerCommand = new RelayCommand(_ => CreateServer_Executed());
         ClientConnectCommand= new RelayCommand(_ => ClientConnect_Executed());
-        EventManager.OnMessageReceived += (sender, message, isSelf) =>
-        {
-            Application.Current.Dispatcher.Invoke(() =>
-            {
-                HomeVM.Instance.Messages.Add(new ChatMessage { Content = message, IsSelf = isSelf });
-            });
-        };
     }
 
     /// <summary>
@@ -72,11 +65,25 @@ internal class SettingsVM:ViewModelBase
         }
         _serverManager.CreationServer(ServerIP, ServerPort);
         _serverManager.ServerStart(ServerIP, ServerPort);
+        _serverManager.MessageReceived += (sender, message, isSelf) =>
+        {
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                HomeVM.Instance.Messages.Add(new ChatMessage { Content = message, IsSelf = isSelf });
+            });
+        };
     }
 
     private void ClientConnect_Executed()
     {
         _clientManager.ClientConnect(RemoteServerIP,RemoteServerProt);
+        _serverManager.MessageReceived += (sender, message, isSelf) =>
+        {
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                HomeVM.Instance.Messages.Add(new ChatMessage { Content = message, IsSelf = true });
+            });
+        };
     }
     
     

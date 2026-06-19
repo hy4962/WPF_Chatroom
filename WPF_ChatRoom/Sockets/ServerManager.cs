@@ -13,9 +13,12 @@ namespace WPF_ChatRoom.Sockets
     {
         private static readonly ServerManager _instance =new();
         public static ServerManager Instance => _instance;
+        public event Action<string, string,bool> MessageReceived;
 
         private Dictionary<string,Socket> _serverDictionary;
         private Dictionary<string,Socket> _clientDictionary;
+
+        public event Action<string> AddClient; //通知UI更新列表框
 
 		public Dictionary<string,Socket> ServerDictionary
         {
@@ -82,7 +85,7 @@ namespace WPF_ChatRoom.Sockets
                         Socket client = server.Accept();//阻塞等待客户端连接
                         string clientEndPoint = client.RemoteEndPoint.ToString();
                         _clientDictionary.Add(clientEndPoint, client);
-                        EventManager.RaiseClientConnect(clientEndPoint);
+                        AddClient?.Invoke(clientEndPoint);
                         Task.Run(() => ClientReceiveLoop(client));
                     }
                     catch (Exception)
@@ -111,7 +114,7 @@ namespace WPF_ChatRoom.Sockets
                         string message = Encoding.UTF8.GetString(buffer, 0, bytesRead);
                         string clientEndPoint = client.RemoteEndPoint.ToString();
                         bool isSelf = false;
-                        EventManager.RaiseMessageReceived(clientEndPoint, message,false);
+                        MessageReceived?.Invoke(clientEndPoint, message, isSelf);
                     }
                 }
 
