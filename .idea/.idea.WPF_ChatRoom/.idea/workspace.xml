@@ -14,12 +14,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="204b2fc0-7c55-4b94-80a0-efc9017ceed3" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/WPF_ChatRoom/EventManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WPF_ChatRoom/Models/ChatDbContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WPF_ChatRoom/Models/ChatMessageEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WPF_ChatRoom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WPF_ChatRoom/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WPF_ChatRoom/Sockets/ClientManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WPF_ChatRoom/Sockets/ClientManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WPF_ChatRoom/Sockets/ServerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WPF_ChatRoom/Sockets/ServerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WPF_ChatRoom/Models/ChatMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WPF_ChatRoom/Models/ChatMessage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WPF_ChatRoom/ViewModels/HomeVM.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WPF_ChatRoom/ViewModels/HomeVM.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WPF_ChatRoom/ViewModels/SettingsVM.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WPF_ChatRoom/ViewModels/SettingsVM.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WPF_ChatRoom/WPF_ChatRoom.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WPF_ChatRoom/WPF_ChatRoom.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,61 +52,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="4.434354902199257E-129" />
-      <entry key="MS500" value="2.1424708148183387E-26" />
-      <entry key="S2" value="8.702249068442215E-7" />
-      <entry key="S5" value="0.015495554581372004" />
-      <entry key="S10" value="0.4413174653176254" />
-      <entry key="S30" value="4.723606553252898" />
-      <entry key="S60" value="10.633606495444994" />
-      <entry key="M2" value="19.660371628816453" />
-      <entry key="M5" value="37.46507298523557" />
-      <entry key="M10" value="60.534239989163424" />
-      <entry key="M15" value="83.35305111044498" />
-      <entry key="M30" value="148.24546745133117" />
-      <entry key="H1" value="263.70770203243325" />
-      <entry key="H2" value="456.02521895667195" />
-      <entry key="H4" value="686.0846760723588" />
-      <entry key="D1" value="1052.5620205711145" />
-      <entry key="W1" value="1142.086924664259" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000000000072296" />
+      <entry key="S2" value="1.0037065795807172" />
+      <entry key="S5" value="1.2058651329397243" />
+      <entry key="S10" value="1.7857892815556253" />
+      <entry key="S30" value="2.9366116510170386" />
+      <entry key="S60" value="3.8664836762406263" />
+      <entry key="M2" value="7.050021002149549" />
+      <entry key="M5" value="19.596950655723457" />
+      <entry key="M10" value="36.73528523399266" />
+      <entry key="M15" value="51.68725250239848" />
+      <entry key="M30" value="91.4068528041237" />
+      <entry key="H1" value="174.99032975514837" />
+      <entry key="H2" value="356.57738650317424" />
+      <entry key="H4" value="632.6195992808408" />
+      <entry key="D1" value="1182.1954186704274" />
+      <entry key="W1" value="1334.290403896877" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0000000000000477" />
-      <entry key="MS500" value="1.0021942156254182" />
-      <entry key="S2" value="1.2896626730199436" />
-      <entry key="S5" value="2.0096372354468715" />
-      <entry key="S10" value="2.845225656589011" />
-      <entry key="S30" value="4.984407143999752" />
-      <entry key="S60" value="7.308136122215506" />
-      <entry key="M2" value="10.73768014639363" />
-      <entry key="M5" value="18.763714145043455" />
-      <entry key="M10" value="30.44419991071434" />
-      <entry key="M15" value="41.1209505442073" />
-      <entry key="M30" value="68.1260034588119" />
-      <entry key="H1" value="114.51721085390078" />
-      <entry key="H2" value="197.7689405663349" />
-      <entry key="H4" value="302.573619263849" />
-      <entry key="D1" value="474.099930781991" />
-      <entry key="W1" value="516.4576653068589" />
+      <entry key="MS100" value="9.842684775114338E-41" />
+      <entry key="MS500" value="1.0106395697887281E-8" />
+      <entry key="S2" value="0.013419878109749617" />
+      <entry key="S5" value="0.26183175286914667" />
+      <entry key="S10" value="0.735000004343946" />
+      <entry key="S30" value="1.9534810201810715" />
+      <entry key="S60" value="3.458431722952242" />
+      <entry key="M2" value="6.212036681484388" />
+      <entry key="M5" value="13.388347884805217" />
+      <entry key="M10" value="22.464703618356587" />
+      <entry key="M15" value="29.415575559337565" />
+      <entry key="M30" value="45.671702367396996" />
+      <entry key="H1" value="79.43755160940479" />
+      <entry key="H2" value="156.0910900365186" />
+      <entry key="H4" value="277.8090524528856" />
+      <entry key="D1" value="527.9688931639993" />
+      <entry key="W1" value="598.1774022505145" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="8.280055709519481E-5" />
-      <entry key="MS500" value="0.15271435600916142" />
-      <entry key="S2" value="0.7789918727838886" />
-      <entry key="S5" value="1.650929943480698" />
-      <entry key="S10" value="3.009625453653623" />
-      <entry key="S30" value="9.534719019400395" />
-      <entry key="S60" value="17.806349310125505" />
-      <entry key="M2" value="30.291466998756505" />
-      <entry key="M5" value="56.14830957696841" />
-      <entry key="M10" value="90.91094310831294" />
-      <entry key="M15" value="124.41169097334684" />
-      <entry key="M30" value="216.3166217505723" />
-      <entry key="H1" value="378.1766578354724" />
-      <entry key="H2" value="653.7525295582528" />
-      <entry key="H4" value="988.626945897399" />
-      <entry key="D1" value="1526.6539187445085" />
-      <entry key="W1" value="1658.543344288329" />
+      <entry key="MS100" value="0.7022224378689985" />
+      <entry key="MS500" value="0.9317404294994674" />
+      <entry key="S2" value="0.9916497745485034" />
+      <entry key="S5" value="1.382684024930155" />
+      <entry key="S10" value="2.3991150060529414" />
+      <entry key="S30" value="4.7899451495496415" />
+      <entry key="S60" value="7.236528184261416" />
+      <entry key="M2" value="13.168133717977328" />
+      <entry key="M5" value="32.89069627860065" />
+      <entry key="M10" value="59.12074882959446" />
+      <entry key="M15" value="81.03539464070629" />
+      <entry key="M30" value="137.02912266951893" />
+      <entry key="H1" value="254.38785432217236" />
+      <entry key="H2" value="512.6318511051052" />
+      <entry key="H4" value="910.397680176425" />
+      <entry key="D1" value="1710.154939689181" />
+      <entry key="W1" value="1932.4663005998914" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -132,7 +133,7 @@
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;EventManager&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;DataBase&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -181,6 +182,9 @@
       <workItem from="1781886169544" duration="1281000" />
       <workItem from="1781932865781" duration="210000" />
       <workItem from="1781933319567" duration="398000" />
+      <workItem from="1781935221214" duration="5005000" />
+      <workItem from="1781941889768" duration="2601000" />
+      <workItem from="1781971920724" duration="959000" />
     </task>
     <servers />
   </component>
@@ -207,6 +211,19 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WPF_ChatRoom/ViewModels/HomeVM.cs</url>
+          <line>66</line>
+          <properties documentPath="D:\Project\WPF\WPF_ChatRoom\WPF_ChatRoom\ViewModels\HomeVM.cs" containingFunctionPresentation="lambda 表达式内 构造函数 'HomeVM'">
+            <startOffsets>
+              <option value="2318" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2319" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

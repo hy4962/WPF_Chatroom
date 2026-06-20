@@ -51,13 +51,6 @@ internal class SettingsVM:ViewModelBase
     {
         CreateServerCommand = new RelayCommand(_ => CreateServer_Executed());
         ClientConnectCommand= new RelayCommand(_ => ClientConnect_Executed());
-        EventManager.OnMessageReceived+= (sender, message, isSelf) =>
-        {
-            Application.Current.Dispatcher.Invoke(() =>
-            {
-                HomeVM.Instance.Messages.Add(new ChatMessage { Content = message, IsSelf = isSelf });
-            });
-        };
     }
 
     /// <summary>
