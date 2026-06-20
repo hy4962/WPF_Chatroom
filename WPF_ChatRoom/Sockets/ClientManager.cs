@@ -10,9 +10,6 @@ public class ClientManager
     public static ClientManager Instance => _instance;
     
     private Dictionary<string, Socket> _serverDictionary;
-
-    public event Action<string> AddServer; 
-    
     
     public Dictionary<string, Socket> ServerDictionary
     {
@@ -30,7 +27,7 @@ public class ClientManager
         Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         socket.Connect(ip,port);
         _serverDictionary.Add($"{ip}:{port}",socket);
-        AddServer?.Invoke($"{ip}:{port}");
+        EventManager.RaiseRemoteServer($"{ip}:{port}");
     }
 
     public void Send(string serverEndPoint,string message)
