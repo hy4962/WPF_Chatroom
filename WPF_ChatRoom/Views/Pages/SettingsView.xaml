@@ -8,13 +8,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Border CornerRadius="20">
-        <Grid ShowGridLines="False">
+        <Grid ShowGridLines="True">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="20"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            
             <!--Server-->
             <Grid>
                 <Grid.RowDefinitions>
@@ -42,8 +41,7 @@
                 <cc:CustomButton Grid.Row="4" Grid.Column="1" Width="80" Height="30" Content="创建服务端" Command="{Binding CreateServerCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CustomButtonStyle}"></cc:CustomButton>
             </Grid>
             
-            <Line Grid.RowSpan="99" Grid.Column="1" X1="10" Y1="0" X2="10" Y2="1000" Stroke="Black" StrokeThickness="2" StrokeDashArray="4 2"/>
-            
+            <Line Grid.RowSpan="99" Grid.Column="1" X1="10" Y1="0" X2="10" Y2="3000" Stroke="Black" StrokeThickness="2" StrokeDashArray="4 2"/>
             <!--Client-->
             <Grid Grid.Column="2">
                 <Grid.RowDefinitions>
@@ -68,9 +66,7 @@
                 <cc:CustomButton Grid.Row="4" Grid.Column="1" Width="80" Height="30" Content="连接至服务器" Command="{Binding ClientConnectCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource CustomButtonStyle}"/>
             </Grid>
             
-            <Line Grid.RowSpan="99" Grid.Column="1" X1="10" Y1="0" X2="10" Y2="1000" Stroke="Black" StrokeThickness="2" StrokeDashArray="4 2"/>
 
         </Grid>
-        
     </Border>
 </UserControl>

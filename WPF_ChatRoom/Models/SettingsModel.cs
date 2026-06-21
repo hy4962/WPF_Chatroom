@@ -1,17 +1,17 @@
-﻿namespace WPF_ChatRoom.Models;
+﻿using System.Text.Json.Serialization;
+
+namespace WPF_ChatRoom.Models;
 
 public class SettingsModel
 {
     private static readonly Lazy<SettingsModel> _lazy = new Lazy<SettingsModel>(() => new SettingsModel());//这样写的单例是延迟加载，真正被访问的时候才会new
-        
-
     
     private string _serverIP;
     private int _serverPort;
     private int _serverMaxNumber;
 
-    private string _clientIP;
-    private int _clientPort;
+    private string _remoteServerIP;
+    private int _remoteServerPort;
     private static readonly object _lock = new object();//项目里目前唯一看不懂的玩意？？这特么啥玩意啊
 
     public string ServerIP
@@ -44,33 +44,29 @@ public class SettingsModel
         }
     }
     
-    public string ClientIP
+    public string RemoteServerIP
     {
-        get=> _clientIP;
+        get=> _remoteServerIP;
         set
         {            
-            if (value == _clientIP) return;
-            _clientIP = value;
+            if (value == _remoteServerIP) return;
+            _remoteServerIP = value;
         }
     }
     
-    public int ClientPort
+    public int RemoteServerPort
     {
-        get=> _clientPort;
+        get=> _remoteServerPort;
         set
         {            
-            if (value == _clientPort) return;
-            _clientPort = value;
+            if (value == _remoteServerPort) return;
+            _remoteServerPort = value;
         }
     }
     
+    [JsonConstructor]//这个是告诉Json序列器用这个构造函数来创建对象
     private SettingsModel()
     {
-        ServerIP = "127.0.0.1";
-        ServerPort = 8686;
-        ServerMaxNumber = 10;
-        ClientIP = "127.0.0.1";
-        ClientPort = 8686;
     }
 
     public static SettingsModel Instance => _lazy.Value;

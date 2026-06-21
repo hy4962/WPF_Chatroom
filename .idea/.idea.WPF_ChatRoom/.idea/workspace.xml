@@ -14,13 +14,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="204b2fc0-7c55-4b94-80a0-efc9017ceed3" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/WPF_ChatRoom/Models/ChatDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WPF_ChatRoom/Models/ChatMessageEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WPF_ChatRoom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WPF_ChatRoom/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WPF_ChatRoom/Models/ChatMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WPF_ChatRoom/Models/ChatMessage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WPF_ChatRoom/ViewModels/HomeVM.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WPF_ChatRoom/ViewModels/HomeVM.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WPF_ChatRoom/Models/SettingsModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WPF_ChatRoom/Models/SettingsModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WPF_ChatRoom/ViewModels/SettingsVM.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WPF_ChatRoom/ViewModels/SettingsVM.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WPF_ChatRoom/WPF_ChatRoom.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WPF_ChatRoom/WPF_ChatRoom.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WPF_ChatRoom/Views/Pages/SettingsView.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/WPF_ChatRoom/Views/Pages/SettingsView.xaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +37,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fe723f5e7ff84eb6b237d413aee3d95df15750/38/1b8b2fc0/CollectionView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/5f16b0cc3ea34d8485adaef82e84effab950/6a/d21fd1e9/Socket.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/metadata/bcde01547f394938bf7a9f0c5837200814150/ca/1d9d465e/JsonArray.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WPF_ChatRoom/EventManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WPF_ChatRoom/Models/SettingsModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WPF_ChatRoom/Sockets/ClientManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -53,60 +51,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000000000072296" />
-      <entry key="S2" value="1.0037065795807172" />
-      <entry key="S5" value="1.2058651329397243" />
-      <entry key="S10" value="1.7857892815556253" />
-      <entry key="S30" value="2.9366116510170386" />
-      <entry key="S60" value="3.8664836762406263" />
-      <entry key="M2" value="7.050021002149549" />
-      <entry key="M5" value="19.596950655723457" />
-      <entry key="M10" value="36.73528523399266" />
-      <entry key="M15" value="51.68725250239848" />
-      <entry key="M30" value="91.4068528041237" />
-      <entry key="H1" value="174.99032975514837" />
-      <entry key="H2" value="356.57738650317424" />
-      <entry key="H4" value="632.6195992808408" />
-      <entry key="D1" value="1182.1954186704274" />
-      <entry key="W1" value="1334.290403896877" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0000000000000009" />
+      <entry key="S10" value="1.0000000752686378" />
+      <entry key="S30" value="1.0194840557980371" />
+      <entry key="S60" value="1.4891072192111694" />
+      <entry key="M2" value="3.818661568586137" />
+      <entry key="M5" value="13.365400885867006" />
+      <entry key="M10" value="32.02887143793264" />
+      <entry key="M15" value="51.60110382484353" />
+      <entry key="M30" value="104.9765089804908" />
+      <entry key="H1" value="199.35751626495008" />
+      <entry key="H2" value="385.2328659903328" />
+      <entry key="H4" value="673.6167501691091" />
+      <entry key="D1" value="1278.33246268504" />
+      <entry key="W1" value="1451.2749818717216" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="9.842684775114338E-41" />
-      <entry key="MS500" value="1.0106395697887281E-8" />
-      <entry key="S2" value="0.013419878109749617" />
-      <entry key="S5" value="0.26183175286914667" />
-      <entry key="S10" value="0.735000004343946" />
-      <entry key="S30" value="1.9534810201810715" />
-      <entry key="S60" value="3.458431722952242" />
-      <entry key="M2" value="6.212036681484388" />
-      <entry key="M5" value="13.388347884805217" />
-      <entry key="M10" value="22.464703618356587" />
-      <entry key="M15" value="29.415575559337565" />
-      <entry key="M30" value="45.671702367396996" />
-      <entry key="H1" value="79.43755160940479" />
-      <entry key="H2" value="156.0910900365186" />
-      <entry key="H4" value="277.8090524528856" />
-      <entry key="D1" value="527.9688931639993" />
-      <entry key="W1" value="598.1774022505145" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="1.1959697298677806E-220" />
+      <entry key="S2" value="1.0457552340891999E-55" />
+      <entry key="S5" value="1.0180568227268842E-22" />
+      <entry key="S10" value="1.008988369052119E-11" />
+      <entry key="S30" value="2.2019078911859167E-4" />
+      <entry key="S60" value="0.020534423073354027" />
+      <entry key="M2" value="0.3722364383230384" />
+      <entry key="M5" value="3.5173908235385185" />
+      <entry key="M10" value="10.964140207762062" />
+      <entry key="M15" value="19.30213199148322" />
+      <entry key="M30" value="42.248304447296334" />
+      <entry key="H1" value="81.86753847965669" />
+      <entry key="H2" value="160.65216237932185" />
+      <entry key="H4" value="287.20251768664264" />
+      <entry key="D1" value="560.9670397874706" />
+      <entry key="W1" value="640.3922640907624" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.7022224378689985" />
-      <entry key="MS500" value="0.9317404294994674" />
-      <entry key="S2" value="0.9916497745485034" />
-      <entry key="S5" value="1.382684024930155" />
-      <entry key="S10" value="2.3991150060529414" />
-      <entry key="S30" value="4.7899451495496415" />
-      <entry key="S60" value="7.236528184261416" />
-      <entry key="M2" value="13.168133717977328" />
-      <entry key="M5" value="32.89069627860065" />
-      <entry key="M10" value="59.12074882959446" />
-      <entry key="M15" value="81.03539464070629" />
-      <entry key="M30" value="137.02912266951893" />
-      <entry key="H1" value="254.38785432217236" />
-      <entry key="H2" value="512.6318511051052" />
-      <entry key="H4" value="910.397680176425" />
-      <entry key="D1" value="1710.154939689181" />
-      <entry key="W1" value="1932.4663005998914" />
+      <entry key="MS100" value="1.0319869727722744E-8" />
+      <entry key="MS500" value="0.025277542136304346" />
+      <entry key="S2" value="0.3987344051407487" />
+      <entry key="S5" value="0.6922667685235865" />
+      <entry key="S10" value="0.8320257764048888" />
+      <entry key="S30" value="0.9601752882131298" />
+      <entry key="S60" value="1.4779738827604234" />
+      <entry key="M2" value="4.1650755983086425" />
+      <entry key="M5" value="16.838320457886255" />
+      <entry key="M10" value="42.93568375744595" />
+      <entry key="M15" value="70.84259815240206" />
+      <entry key="M30" value="147.16740875091014" />
+      <entry key="H1" value="281.17605035374925" />
+      <entry key="H2" value="545.8425312777476" />
+      <entry key="H4" value="960.7845146154439" />
+      <entry key="D1" value="1839.289036372504" />
+      <entry key="W1" value="2091.6655602621554" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -121,28 +119,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET 项目.WPF_ChatRoom.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;DataBase&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET 项目.WPF_ChatRoom.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "SettingSaveJson",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="WPF_ChatRoom" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -185,6 +183,8 @@
       <workItem from="1781935221214" duration="5005000" />
       <workItem from="1781941889768" duration="2601000" />
       <workItem from="1781971920724" duration="959000" />
+      <workItem from="1781973085604" duration="1215000" />
+      <workItem from="1782011128635" duration="1628000" />
     </task>
     <servers />
   </component>

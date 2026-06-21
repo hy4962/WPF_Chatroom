@@ -1,4 +1,8 @@
-﻿using System.Windows;
+﻿using System.IO;
+using System.Text;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.Windows;
 using System.Windows.Input;
 using WPF_ChatRoom.Models;
 using WPF_ChatRoom.Sockets;
@@ -28,14 +32,14 @@ internal class SettingsVM:ViewModelBase
     }
     public string RemoteServerIP
     {
-        get => _settingsModel.ClientIP;
-        set=>_settingsModel.ClientIP = value;
+        get => _settingsModel.RemoteServerIP;
+        set=>_settingsModel.RemoteServerIP = value;
             
     }
     public int RemoteServerProt
     {
-        get => _settingsModel.ClientPort;
-        set=> _settingsModel.ClientPort = value;
+        get => _settingsModel.RemoteServerPort;
+        set=> _settingsModel.RemoteServerPort = value;
     }
     public ICommand CreateServerCommand { get; }
     public ICommand ClientConnectCommand { get; }
@@ -51,6 +55,7 @@ internal class SettingsVM:ViewModelBase
     {
         CreateServerCommand = new RelayCommand(_ => CreateServer_Executed());
         ClientConnectCommand= new RelayCommand(_ => ClientConnect_Executed());
+        LoadJson();
     }
 
     /// <summary>
@@ -65,12 +70,41 @@ internal class SettingsVM:ViewModelBase
         }
         _serverManager.CreationServer(ServerIP, ServerPort);
         _serverManager.ServerStart(ServerIP, ServerPort);
+        SaveJson();
     }
 
+    /// <summary>
+    /// 连接到服务器
+    /// </summary>
     private void ClientConnect_Executed()
     {
         _clientManager.ClientConnect(RemoteServerIP,RemoteServerProt);
+        SaveJson();
     }
-    
+
+    private void SaveJson()
+    {
+        var options = new JsonSerializerOptions
+        {
+            WriteIndented = true,           // 格式化缩进，方便阅读
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase, // 驼峰命名（可选）
+            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull // 忽略null值
+        };
+        string json_string = JsonSerializer.Serialize(_settingsModel,options);
+        File.WriteAllText("Setting.json", json_string,Encoding.UTF8);
+    }
+
+    private void LoadJson()
+    {
+        if (!File.Exists($"Setting.json"))
+            return;
+        var options = new JsonSerializerOptions
+        {
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase  // 和保存时保持一致
+        };
+        string json_string = File.ReadAllText("Setting.json", Encoding.UTF8);
+        SettingsModel settings = JsonSerializer.Deserialize<SettingsModel>(json_string, options);
+        _settingsModel = settings;
+    }
     
 }
