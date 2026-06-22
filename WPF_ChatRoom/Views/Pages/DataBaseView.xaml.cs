@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_ChatRoom.ViewModels;
 
 namespace WPF_ChatRoom.Views.Pages
 {
@@ -21,6 +22,7 @@ namespace WPF_ChatRoom.Views.Pages
         public DataBaseView()
         {
             InitializeComponent();
+            this.DataContext = new DataBaseVM();
         }
     }
 }
