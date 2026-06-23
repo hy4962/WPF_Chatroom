@@ -55,6 +55,13 @@ namespace WPF_ChatRoom.ViewModels
         {
             SendCommand = new RelayCommand(_ => SendMessage());
             LoadAllMessages();
+            EventManager.OnMessageReceived += (string sender, string message, bool IsSelf) =>
+            {
+                Application.Current.Dispatcher.Invoke
+                (
+                    () => Messages.Add(new ChatMessage(sender, message, IsSelf))
+                );
+            };
             EventManager.OnConnectClient += (string EndPoint) =>
             {
                 //Application.Current.Dispatcher.Invoke回到ui线程去操作，因为通知的时候是在后台线程(Task)里
@@ -103,7 +110,6 @@ namespace WPF_ChatRoom.ViewModels
                     ChatMessageEntity entity =  db.FormChatMessage(msg);
                     db.AddMessage(entity);
                 }
-        
                 if (SelectRemoteServer != null)
                 {
                     _clientManager.Send(SelectRemoteServer, InputText);

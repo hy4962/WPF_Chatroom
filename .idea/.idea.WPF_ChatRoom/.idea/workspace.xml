@@ -14,10 +14,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="204b2fc0-7c55-4b94-80a0-efc9017ceed3" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/WPF_ChatRoom/ViewModels/DataBaseVM.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WPF_ChatRoom/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WPF_ChatRoom/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WPF_ChatRoom/Views/Pages/DataBaseView.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/WPF_ChatRoom/Views/Pages/DataBaseView.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WPF_ChatRoom/Views/Pages/DataBaseView.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WPF_ChatRoom/Views/Pages/DataBaseView.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WPF_ChatRoom/ViewModels/HomeVM.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WPF_ChatRoom/ViewModels/HomeVM.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,61 +49,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0744210556226177" />
-      <entry key="MS500" value="2.017828918509018" />
-      <entry key="S2" value="2.68781468903144" />
-      <entry key="S5" value="2.8686094224190244" />
-      <entry key="S10" value="2.9331900051791706" />
-      <entry key="S30" value="3.0165320652960097" />
-      <entry key="S60" value="3.58062397448855" />
-      <entry key="M2" value="6.565212826093474" />
-      <entry key="M5" value="23.52547519053469" />
-      <entry key="M10" value="57.22626511536345" />
-      <entry key="M15" value="87.81672785423464" />
-      <entry key="M30" value="166.71307234484922" />
-      <entry key="H1" value="284.7074348134406" />
-      <entry key="H2" value="470.0075803556853" />
-      <entry key="H4" value="783.1522053318894" />
-      <entry key="D1" value="1650.4263942713874" />
-      <entry key="W1" value="1947.362349302839" />
+      <entry key="MS100" value="1.0775183060188654E-4" />
+      <entry key="MS500" value="0.16087366567585049" />
+      <entry key="S2" value="0.643257429191331" />
+      <entry key="S5" value="0.99225457015637" />
+      <entry key="S10" value="1.355428496544913" />
+      <entry key="S30" value="2.8249963009617995" />
+      <entry key="S60" value="5.341037250172735" />
+      <entry key="M2" value="9.498327127038207" />
+      <entry key="M5" value="23.048347445879084" />
+      <entry key="M10" value="52.55942711969347" />
+      <entry key="M15" value="82.15944263141294" />
+      <entry key="M30" value="161.70504061746885" />
+      <entry key="H1" value="282.89484144330066" />
+      <entry key="H2" value="471.7152174000786" />
+      <entry key="H4" value="787.7166420331858" />
+      <entry key="D1" value="1664.3459600991555" />
+      <entry key="W1" value="1965.5055370513217" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="4.651191866208182E-89" />
-      <entry key="S2" value="8.331070616922296E-23" />
-      <entry key="S5" value="1.6892919974831116E-9" />
-      <entry key="S10" value="5.320045081695516E-5" />
-      <entry key="S30" value="0.06179592518168826" />
-      <entry key="S60" value="0.44016649339002817" />
-      <entry key="M2" value="1.568933665402577" />
-      <entry key="M5" value="7.5699513302218" />
-      <entry key="M10" value="21.039713369438186" />
-      <entry key="M15" value="34.519652200500865" />
-      <entry key="M30" value="71.69033501542147" />
-      <entry key="H1" value="127.20652530797528" />
-      <entry key="H2" value="210.04088948872874" />
-      <entry key="H4" value="347.41847865624516" />
-      <entry key="D1" value="734.2312816750647" />
-      <entry key="W1" value="868.3486908798511" />
+      <entry key="MS100" value="1.0000000000376124" />
+      <entry key="MS500" value="1.0085064672258077" />
+      <entry key="S2" value="1.4310489249162606" />
+      <entry key="S5" value="2.095673670722249" />
+      <entry key="S10" value="2.640387861592311" />
+      <entry key="S30" value="3.6958930938468284" />
+      <entry key="S60" value="5.032967144584077" />
+      <entry key="M2" value="7.291983721433807" />
+      <entry key="M5" value="13.504037379725574" />
+      <entry key="M10" value="25.833793753362144" />
+      <entry key="M15" value="38.819580666932346" />
+      <entry key="M30" value="75.87388222544989" />
+      <entry key="H1" value="132.6633439952722" />
+      <entry key="H2" value="217.18904181093995" />
+      <entry key="H4" value="355.9515686400182" />
+      <entry key="D1" value="746.9605779998028" />
+      <entry key="W1" value="882.965124165352" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.09098700122706516" />
-      <entry key="MS500" value="1.4253411776661735" />
-      <entry key="S2" value="2.484984811150857" />
-      <entry key="S5" value="2.7817763791861925" />
-      <entry key="S10" value="2.888811353602033" />
-      <entry key="S30" value="3.0609584856949987" />
-      <entry key="S60" value="4.003813241197139" />
-      <entry key="M2" value="8.111036081433495" />
-      <entry key="M5" value="31.045947212205515" />
-      <entry key="M10" value="78.19021636297974" />
-      <entry key="M15" value="122.25276833194661" />
-      <entry key="M30" value="238.32121496438114" />
-      <entry key="H1" value="411.8454500948959" />
-      <entry key="H2" value="679.9941758309138" />
-      <entry key="H4" value="1130.5277075385102" />
-      <entry key="D1" value="2384.6435325972825" />
-      <entry key="W1" value="2815.7086834910606" />
+      <entry key="MS100" value="4.3335554402220534E-4" />
+      <entry key="MS500" value="0.28816839349112333" />
+      <entry key="S2" value="1.4686532316748053" />
+      <entry key="S5" value="2.6756228196945093" />
+      <entry key="S10" value="3.716133251034854" />
+      <entry key="S30" value="6.364515790697203" />
+      <entry key="S60" value="10.248549090446646" />
+      <entry key="M2" value="16.69055849727056" />
+      <entry key="M5" value="36.474194385829016" />
+      <entry key="M10" value="78.31047384707944" />
+      <entry key="M15" value="120.89266224042552" />
+      <entry key="M30" value="237.4951804772524" />
+      <entry key="H1" value="415.48793034418935" />
+      <entry key="H2" value="688.8485701534212" />
+      <entry key="H4" value="1143.6243257141296" />
+      <entry key="D1" value="2411.2921541156834" />
+      <entry key="W1" value="2848.4682649461047" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -132,7 +130,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "cidr.known.project.marker": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "DataBasePage",
+    "git-widget-placeholder": "fix/Messagebug",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -188,6 +186,7 @@
       <workItem from="1782011128635" duration="1628000" />
       <workItem from="1782013301488" duration="6193000" />
       <workItem from="1782106477977" duration="5215000" />
+      <workItem from="1782205908371" duration="619000" />
     </task>
     <servers />
   </component>
@@ -216,13 +215,13 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/WPF_ChatRoom/ViewModels/HomeVM.cs</url>
-          <line>66</line>
+          <line>73</line>
           <properties documentPath="D:\Project\WPF\WPF_ChatRoom\WPF_ChatRoom\ViewModels\HomeVM.cs" containingFunctionPresentation="lambda 表达式内 构造函数 'HomeVM'">
             <startOffsets>
-              <option value="2318" />
+              <option value="2613" />
             </startOffsets>
             <endOffsets>
-              <option value="2319" />
+              <option value="2614" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />
