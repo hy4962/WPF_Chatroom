@@ -22,10 +22,19 @@ public class ClientManager
         _serverDictionary =new Dictionary<string, Socket>();
     }
 
-    public void ClientConnect(string ip, int port)
+    public async void ClientConnect(string ip, int port)
     {
         Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-        socket.Connect(ip,port);
+        try
+        {
+            await socket.ConnectAsync(ip,port);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+        
         _serverDictionary.Add($"{ip}:{port}",socket);
         EventManager.RaiseRemoteServer($"{ip}:{port}");
     }

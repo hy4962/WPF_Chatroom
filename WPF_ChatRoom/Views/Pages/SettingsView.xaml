@@ -15,13 +15,14 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <!--Server-->
-            <Grid>
+            <Grid ShowGridLines="True">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="150"/>
                     <RowDefinition Height="30"/>
                     <RowDefinition Height="30"/>
                     <RowDefinition Height="30"/>
-                    <RowDefinition />
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="3*"/>

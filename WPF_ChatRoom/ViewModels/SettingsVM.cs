@@ -73,6 +73,7 @@ internal class SettingsVM:ViewModelBase
         SaveJson();
     }
 
+
     /// <summary>
     /// 连接到服务器
     /// </summary>
@@ -91,10 +92,10 @@ internal class SettingsVM:ViewModelBase
             DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull // 忽略null值
         };
         string json_string = JsonSerializer.Serialize(_settingsModel,options);
-        File.WriteAllText("Setting.json", json_string,Encoding.UTF8);
+        File.WriteAllTextAsync("Setting.json", json_string,Encoding.UTF8);
     }
 
-    private void LoadJson()
+    private async Task LoadJson()
     {
         if (!File.Exists($"Setting.json"))
             return;
@@ -102,9 +103,10 @@ internal class SettingsVM:ViewModelBase
         {
             PropertyNamingPolicy = JsonNamingPolicy.CamelCase  // 和保存时保持一致
         };
-        string json_string = File.ReadAllText("Setting.json", Encoding.UTF8);
-        SettingsModel settings = JsonSerializer.Deserialize<SettingsModel>(json_string, options);
+        string json_string = await File.ReadAllTextAsync("Setting.json", Encoding.UTF8);
+        SettingsModel settings = JsonSerializer.Deserialize<SettingsModel>(json_string,options);
         _settingsModel = settings;
     }
     
 }
+

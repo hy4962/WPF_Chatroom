@@ -57,47 +57,40 @@ internal class DataBaseVM:ViewModelBase
     /// <summary>
     /// 删除选中行并保存
     /// </summary>
-    private void DeleteSelect()
+    private async Task DeleteSelect()
     {
-        UI_Messages.Remove(SelectedItem);
-        SaveMessages();
+        if (SelectedItem == null)return;
+        var item = SelectedItem;
+        UI_Messages.Remove(item);
+        db.Message.Remove(item);
+        await db.SaveChangesAsync();
     }
     
     /// <summary>
     /// 加载数据库内容到图表
     /// </summary>
-    private void LoadMessages()
+    private async Task LoadMessages()
     {
-        db.Message.OrderBy(x => x.Id).ToList().ForEach(x =>
+        var list = await db.Message.OrderBy(x => x.Id).ToListAsync();
+        foreach (var x in list)
         {
             UI_Messages.Add(x);
-        });
+        }
     }
 
-    /// <summary>
-    /// 把当前表格内容覆盖数据里面的Message表格
-    /// </summary>
-    private void SaveMessages()
-    {
-        db.Message.ExecuteDelete();//删除整个Message表的内容
-        foreach (var x in UI_Messages)
-        {
-            db.Message.Add(x);
-        }
-        db.SaveChanges();
-    }
 
 
     /// <summary>
     /// 添加一行
     /// </summary>
-    private void Add()
+    private async Task Add()
     {
         var Entity =  new ChatMessageEntity();
         Entity.SenderEndPoint = EndPoint;
         Entity.Content = Content;
         UI_Messages.Add(Entity);
-        SaveMessages();
+        db.Message.Add(Entity);
+        await db.SaveChangesAsync();
     }
 
     /// <summary>
@@ -114,13 +107,13 @@ internal class DataBaseVM:ViewModelBase
     /// <summary>
     /// 保存编辑当前项
     /// </summary>
-    private void Edit()
+    private async Task Edit()
     {
         _selectedItem.SenderEndPoint = EndPoint;
         OnPropertyChanged(nameof(EndPoint));
         _selectedItem.Content = Content;
         OnPropertyChanged(nameof(Content));
-        SaveMessages();
+        await db.SaveChangesAsync();
     }
     
 }
